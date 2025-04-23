@@ -1,6 +1,8 @@
 import { View, Text, TextInput, Pressable } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
 export default function LocalForm() {
+    const navigation = useNavigation();
     return(
         <View className="flex-1 items-center justify-evenly bg-black">
             <View className="items-center justify-center pt-[170px]">
@@ -17,6 +19,9 @@ export default function LocalForm() {
                 />
                 <Pressable className="bg-[#E68E20] border rounded-full px-4 py-2 mt-4 w-[300px] items-center">
                     <Text className="text-black font-satoshi p-2">Deploy Contract</Text>
+                </Pressable>
+                <Pressable onPress={() => navigation.navigate("Landing")}>
+                    <Text className='text-white underline underline-offset-auto p-2'> Go back </Text>
                 </Pressable>
             </View>
             <View className="pt-[120px]">
