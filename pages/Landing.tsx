@@ -1,7 +1,9 @@
 import { View, Text, Pressable } from "react-native";
 import { useFonts } from "expo-font";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Landing() {
+  const navigation = useNavigation();
   const [fontsLoaded] = useFonts({
     Satoshi: require("../assets/fonts/Satoshi-Variable.ttf"),
   });
@@ -14,7 +16,9 @@ export default function Landing() {
         <Pressable className="border-[#E68E20] border rounded-full px-4 py-2 mt-4">
           <Text className="text-[#E68E20] font-satoshi p-2">Deploy to a blockchain</Text>
         </Pressable>
-        <Pressable className="border-white border rounded-full px-4 py-2 mt-4">
+        <Pressable className="border-white border rounded-full px-4 py-2 mt-4"
+          onPress={() => navigation.navigate("LocalForm")}
+        >
           <Text className="text-white font-satoshi p-2">Create Local Contracts</Text>
         </Pressable>
       </View>

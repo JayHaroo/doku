@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import "./global.css";
 import Landing from "./pages/Landing";
+import LocalForm from "./pages/LocalForm";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ function RootStack() {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Landing" component={Landing} />
+        <Stack.Screen name="LocalForm" component={LocalForm} />
       </Stack.Navigator>
       <StatusBar style="light" />
     </>
