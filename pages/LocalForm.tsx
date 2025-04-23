@@ -10,12 +10,12 @@ export default function LocalForm() {
                 <TextInput
                     placeholder="Contract Name"
                     placeholderTextColor="#E68E20"
-                    className="border-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
+                    className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
                 />
                 <TextInput
                     placeholder="Contract Address"
                     placeholderTextColor="#E68E20"
-                    className="border-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
+                    className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
                 />
                 <Pressable className="bg-[#E68E20] border rounded-full px-4 py-2 mt-4 w-[300px] items-center">
                     <Text className="text-black font-satoshi p-2">Deploy Contract</Text>
