@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, Alert } from "react-native";
 import { useFonts } from "expo-font";
 import { useNavigation } from "@react-navigation/native";
 
@@ -13,7 +13,8 @@ export default function Landing() {
     <View className="flex-1 items-center justify-evenly bg-black">
       <View className="items-center justify-center pt-[170px]">
         <Text className="text-white text-3xl font-satoshi p-5">Doku.</Text>
-        <Pressable className="border-[#E68E20] border rounded-full px-4 py-2 mt-4">
+        <Pressable className="border-[#E68E20] border rounded-full px-4 py-2 mt-4"
+          onPress={() => Alert.alert('Coming Soon!','will be deploying soon!')}>
           <Text className="text-[#E68E20] font-satoshi p-2">Deploy to a blockchain</Text>
         </Pressable>
         <Pressable className="border-white border rounded-full px-4 py-2 mt-4"
