@@ -9,10 +9,6 @@ import Landing from "./pages/Landing";
 import LocalForm from "./pages/LocalForm";
 import OnChainForm from "./pages/OnChainForm";
 
-import "node-libs-react-native/globals"
-import "react-native-url-polyfill/auto"
-import "react-native-get-random-values"
-
 const Stack = createNativeStackNavigator();
 
 function RootStack() {
