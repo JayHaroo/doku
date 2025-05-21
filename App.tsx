@@ -2,6 +2,7 @@ import * as React from "react";
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { useFonts } from "expo-font";
 
 import "./global.css";
 import Landing from "./pages/Landing";
@@ -11,6 +12,11 @@ import OnChainForm from "./pages/OnChainForm";
 const Stack = createNativeStackNavigator();
 
 function RootStack() {
+  const [fontsLoaded] = useFonts({
+    Satoshi: require("./assets/fonts/Satoshi-Variable.ttf"),
+  });
+
+  if (!fontsLoaded) return null;
   return (
     <>
       <Stack.Navigator

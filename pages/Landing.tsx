@@ -1,14 +1,9 @@
 import { View, Text, Pressable, Alert } from "react-native";
-import { useFonts } from "expo-font";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Landing() {
   const navigation = useNavigation();
-  const [fontsLoaded] = useFonts({
-    Satoshi: require("../assets/fonts/Satoshi-Variable.ttf"),
-  });
 
-  if (!fontsLoaded) return null;
   return (
     <View className="flex-1 items-center justify-evenly bg-black">
       <View className="items-center justify-center pt-[170px]">
