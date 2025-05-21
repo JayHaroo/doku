@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import "./global.css";
 import Landing from "./pages/Landing";
 import LocalForm from "./pages/LocalForm";
+import OnChainForm from "./pages/OnChainForm";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +19,7 @@ function RootStack() {
       >
         <Stack.Screen name="Landing" component={Landing} />
         <Stack.Screen name="LocalForm" component={LocalForm} />
+        <Stack.Screen name="OnChainForm" component={OnChainForm} />
       </Stack.Navigator>
       <StatusBar style="light" />
     </>
