@@ -14,6 +14,7 @@ const Stack = createNativeStackNavigator();
 function RootStack() {
   const [fontsLoaded] = useFonts({
     Satoshi: require("./assets/fonts/Satoshi-Variable.ttf"),
+    Jetbrains: require("./assets/fonts/JetBrainsMono-VariableFont_wght.ttf")
   });
 
   if (!fontsLoaded) return null;

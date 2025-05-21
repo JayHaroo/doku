@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         satoshi: ['Satoshi', 'sans-serif'],
+        jetbrains: ['Jetbrains', 'sans-serif']
       },
     },
   },
