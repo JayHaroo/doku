@@ -13,14 +13,14 @@ export default function Landing() {
     <View className="flex-1 items-center justify-evenly bg-black">
       <View className="items-center justify-center pt-[170px]">
         <Text className="text-white text-3xl font-satoshi p-5">Doku.</Text>
-        <Pressable className="border-[#E68E20] border rounded-full px-4 py-2 mt-4"
+        <Pressable className="border-2 border-[#0053FE] border rounded-full px-4 py-2 mt-4"
           onPress={() => Alert.alert('Coming Soon!','will be deploying soon!')}>
-          <Text className="text-[#E68E20] font-satoshi p-2">Deploy to a blockchain</Text>
+          <Text className="text-white font-satoshi p-2">Create and deploy to BASE</Text>
         </Pressable>
         <Pressable className="border-white border rounded-full px-4 py-2 mt-4"
           onPress={() => navigation.navigate("LocalForm")}
         >
-          <Text className="text-white font-satoshi p-2">Create Local Contracts</Text>
+          <Text className="text-white font-satoshi p-2">Create an agreement</Text>
         </Pressable>
       </View>
       <View className="pt-[120px]">
