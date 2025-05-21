@@ -1,6 +1,24 @@
-const { getDefaultConfig } = require("expo/metro-config");
+const { getDefaultConfig, mergeConfig } = require("@react-native/metro-config")
 const { withNativeWind } = require('nativewind/metro');
 
-const config = getDefaultConfig(__dirname)
+const defaultConfig = getDefaultConfig(__dirname)
 
-module.exports = withNativeWind(config, { input: './global.css' })
+module.exports = withNativeWind(defaultConfig, { input: './global.css' })
+
+const config = {
+  transformer: {
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: true,
+      },
+    }),
+  },
+  resolver: {
+    extraNodeModules: {
+      ...require("node-libs-react-native"),
+    },
+  },
+}
+
+module.exports = mergeConfig(defaultConfig, config)
