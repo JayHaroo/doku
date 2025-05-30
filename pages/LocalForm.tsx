@@ -12,6 +12,7 @@ import RadioGroup from "react-native-radio-buttons-group";
 
 export default function LocalForm() {
   const navigation = useNavigation();
+  const [newName, setNewName] = useState("");
   const [names, setNames] = useState<string[]>([]);
 
   const radioButtons = useMemo(
@@ -64,6 +65,8 @@ export default function LocalForm() {
               placeholder="Add a name"
               placeholderTextColor="#E68E20"
               className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[250px] mr-2"
+              value={newName}
+              onChangeText={setNewName}
             />
 
             <Pressable className="bg-[#E68E20] border rounded-full items-center justify-center px-4 py-5 mt-4">
