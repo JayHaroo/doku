@@ -59,14 +59,14 @@ export default function LocalForm() {
               selectedId={selectedId}
             />
           </View>
-          <View className="flex">
+          <View className="flex flex-row">
             <TextInput
               placeholder="Add a name"
               placeholderTextColor="#E68E20"
-              className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
+              className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[250px] mr-2"
             />
 
-            <Pressable lassName="bg-[#E68E20] border rounded-full px-4 py-2 items-center">
+            <Pressable className="bg-[#E68E20] border rounded-full items-center justify-center px-4 py-5 mt-4">
               <Text>Add</Text>
             </Pressable>
           </View>
