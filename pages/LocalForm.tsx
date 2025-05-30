@@ -85,6 +85,9 @@ export default function LocalForm() {
           </View>
 
           <View className="mt-4">
+            <Text className="text-white text-center font-satoshi p-2">
+              Involved Parties:
+            </Text>
             {names.map((name, index) => (
               <Text
                 key={index}
