@@ -1,4 +1,11 @@
-import { View, Text, TextInput, Pressable, Alert, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  Pressable,
+  Alert,
+  ScrollView,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useMemo, useState } from "react";
 import RadioGroup from "react-native-radio-buttons-group";
@@ -32,42 +39,49 @@ export default function LocalForm() {
 
   return (
     <View className="flex-1 items-center justify-evenly bg-black">
-      <View className="items-center justify-center pt-[170px]">
-        <Text className="text-white text-3xl font-satoshi p-5">Doku.</Text>
-        <TextInput
-          placeholder="Contract Name"
-          placeholderTextColor="#E68E20"
-          className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
-        />
-        <TextInput
-          placeholder="Contract Address"
-          placeholderTextColor="#E68E20"
-          className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
-        />
-        <View className="p-5">
-          <RadioGroup
-            radioButtons={radioButtons}
-            onPress={setSelectedId}
-            selectedId={selectedId}
+      <ScrollView className="w-full auto border-2 border-white">
+        <View className="items-center justify-center pt-[170px]">
+          <Text className="text-white text-3xl font-satoshi p-5">Doku.</Text>
+          <TextInput
+            placeholder="Contract Name"
+            placeholderTextColor="#E68E20"
+            className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
           />
+          <TextInput
+            placeholder="Contract Address"
+            placeholderTextColor="#E68E20"
+            className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
+          />
+          <View className="p-5">
+            <RadioGroup
+              radioButtons={radioButtons}
+              onPress={setSelectedId}
+              selectedId={selectedId}
+            />
+          </View>
+          <View>
+            <TextInput
+              placeholder="Add a name"
+              placeholderTextColor="#E68E20"
+              className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
+            />
+
+            <Pressable>
+              <Text> Add </Text>
+            </Pressable>
+          </View>
+
+          <Pressable className="bg-[#E68E20] border rounded-full px-4 py-2 mt-4 w-[300px] items-center">
+            <Text className="text-black font-satoshi p-2">Deploy Contract</Text>
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate("Landing")}>
+            <Text className="text-white underline underline-offset-auto p-2">
+              {" "}
+              Go back{" "}
+            </Text>
+          </Pressable>
         </View>
-        <TextInput
-          placeholder="Add a name"
-          placeholderTextColor="#E68E20"
-          className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
-        />
-
-
-        <Pressable className="bg-[#E68E20] border rounded-full px-4 py-2 mt-4 w-[300px] items-center">
-          <Text className="text-black font-satoshi p-2">Deploy Contract</Text>
-        </Pressable>
-        <Pressable onPress={() => navigation.navigate("Landing")}>
-          <Text className="text-white underline underline-offset-auto p-2">
-            {" "}
-            Go back{" "}
-          </Text>
-        </Pressable>
-      </View>
+      </ScrollView>
       <View className="pt-[120px]">
         <Text className="text-white text-center font-satoshi p-5 mt-4 text-[10px]">
           By using Doku, you agree to our terms of service and privacy policy.
