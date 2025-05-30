@@ -9,7 +9,11 @@ export default function Landing() {
       <View className="items-center justify-center pt-[170px]">
         <Text className="text-white text-3xl font-satoshi p-5">Doku.</Text>
         <Pressable className="border-2 border-[#0053FE] border rounded-full px-4 py-2 mt-4"
-          onPress={() => navigation.navigate("OnChainForm")}>
+          onPress={() => Alert.alert(
+            "Coming Soon",
+            "This feature is under development. Stay tuned for updates!",
+            [{ text: "OK", onPress: () => console.log("OK Pressed") }]
+          )}>
           <Text className="text-white font-jetbrains p-2">Create and deploy to BASE</Text>
         </Pressable>
         <Pressable className="border-white border rounded-full px-4 py-2 mt-4"
