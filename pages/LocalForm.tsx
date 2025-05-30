@@ -1,10 +1,11 @@
-import { View, Text, TextInput, Pressable, Alert } from "react-native";
+import { View, Text, TextInput, Pressable, Alert, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useMemo, useState } from "react";
 import RadioGroup from "react-native-radio-buttons-group";
 
 export default function LocalForm() {
   const navigation = useNavigation();
+  const [names, setNames] = useState<string[]>([]);
 
   const radioButtons = useMemo(
     () => [
@@ -50,6 +51,13 @@ export default function LocalForm() {
             selectedId={selectedId}
           />
         </View>
+        <TextInput
+          placeholder="Add a name"
+          placeholderTextColor="#E68E20"
+          className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
+        />
+
+
         <Pressable className="bg-[#E68E20] border rounded-full px-4 py-2 mt-4 w-[300px] items-center">
           <Text className="text-black font-satoshi p-2">Deploy Contract</Text>
         </Pressable>
