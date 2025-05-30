@@ -50,7 +50,7 @@ export default function LocalForm() {
   return (
     <View className="flex-1 items-center justify-evenly bg-black">
       <ScrollView className="w-full">
-        <View className="items-center justify-center pt-[170px]">
+        <View className="items-center justify-center pt-[100px]">
           <Text className="text-white text-3xl font-satoshi p-5">Doku.</Text>
           <TextInput
             placeholder="Contract Name"
