@@ -15,6 +15,15 @@ export default function LocalForm() {
   const [newName, setNewName] = useState("");
   const [names, setNames] = useState<string[]>([]);
 
+  const handleAddName = () => {
+    if (newName.trim() === "") {
+      Alert.alert("Error", "Please enter a valid name.");
+      return;
+    }
+    setNames((prevNames) => [...prevNames, newName]);
+    setNewName("");
+  };
+
   const radioButtons = useMemo(
     () => [
       {
@@ -69,9 +78,21 @@ export default function LocalForm() {
               onChangeText={setNewName}
             />
 
-            <Pressable className="bg-[#E68E20] border rounded-full items-center justify-center px-4 py-5 mt-4">
+            <Pressable className="bg-[#E68E20] border rounded-full items-center justify-center px-4 py-5 mt-4" 
+              onPress={handleAddName}>
               <Text>Add</Text>
             </Pressable>
+          </View>
+
+          <View className="mt-4">
+            {names.map((name, index) => (
+              <Text
+                key={index}
+                className="text-white text-center font-satoshi p-2"
+              >
+                {name}
+              </Text>
+            ))}
           </View>
 
           <Pressable className="bg-[#E68E20] border rounded-full px-4 py-2 mt-4 w-[300px] items-center">
