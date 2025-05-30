@@ -39,7 +39,7 @@ export default function LocalForm() {
 
   return (
     <View className="flex-1 items-center justify-evenly bg-black">
-      <ScrollView className="w-full auto border-2 border-white">
+      <ScrollView className="w-full">
         <View className="items-center justify-center pt-[170px]">
           <Text className="text-white text-3xl font-satoshi p-5">Doku.</Text>
           <TextInput
@@ -59,15 +59,15 @@ export default function LocalForm() {
               selectedId={selectedId}
             />
           </View>
-          <View>
+          <View className="flex">
             <TextInput
               placeholder="Add a name"
               placeholderTextColor="#E68E20"
               className="border-[#E68E20] text-[#E68E20] border rounded-full px-4 py-5 mt-4 w-[300px]"
             />
 
-            <Pressable>
-              <Text> Add </Text>
+            <Pressable lassName="bg-[#E68E20] border rounded-full px-4 py-2 items-center">
+              <Text>Add</Text>
             </Pressable>
           </View>
 
@@ -82,7 +82,7 @@ export default function LocalForm() {
           </Pressable>
         </View>
       </ScrollView>
-      <View className="pt-[120px]">
+      <View className="">
         <Text className="text-white text-center font-satoshi p-5 mt-4 text-[10px]">
           By using Doku, you agree to our terms of service and privacy policy.
         </Text>
